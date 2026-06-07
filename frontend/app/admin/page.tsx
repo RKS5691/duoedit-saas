@@ -1,14 +1,17 @@
-'use client'function planColor(plan: string): 'green' | 'amber' | 'red' | 'blue' | 'purple' {
-  if (plan === 'pro') return 'purple'
-  if (plan === 'studio') return 'blue'
-  return 'amber'
-}
+'use client'
+
 import { useEffect, useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import Navbar from '@/components/layout/Navbar'
 import { Card, StatCard, Badge, Button, Spinner, Input } from '@/components/ui'
 import { api } from '@/lib/api'
 import { supabase } from '@/lib/supabase'
+
+function planColor(plan: string): 'green' | 'amber' | 'red' | 'blue' | 'purple' {
+  if (plan === 'pro') return 'purple'
+  if (plan === 'studio') return 'blue'
+  return 'amber'
+}
 
 type Tab = 'overview' | 'users' | 'transactions' | 'subscriptions'
 
