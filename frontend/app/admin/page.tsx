@@ -1,4 +1,8 @@
-'use client'
+'use client'function planColor(plan: string): 'green' | 'amber' | 'red' | 'blue' | 'purple' {
+  if (plan === 'pro') return 'purple'
+  if (plan === 'studio') return 'blue'
+  return 'amber'
+}
 import { useEffect, useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import Navbar from '@/components/layout/Navbar'
